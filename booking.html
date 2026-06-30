@@ -1,12 +1,133 @@
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>نوبت‌دهی آنلاین</title>
+
+<style>
+body{
+font-family:tahoma;
+background:#f4f6f8;
+margin:0;
+padding:20px;
+}
+.container{
+max-width:600px;
+margin:auto;
+background:#fff;
+padding:20px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,0,0,.1);
+}
+h2{
+text-align:center;
+color:#0b4b8c;
+}
+input,select,textarea{
+width:100%;
+padding:12px;
+margin-top:10px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:15px;
+}
+button{
+width:100%;
+background:#0b4b8c;
+color:white;
+padding:14px;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+button:hover{
+background:#06376a;
+}
+.success{
+display:none;
+margin-top:20px;
+background:#e8f8ec;
+padding:15px;
+border-radius:8px;
+color:#0b7d34;
+font-weight:bold;
+text-align:center;
+}
+</style>
+
 </head>
+
 <body>
-<h1>نوبت‌دهی آنلاین</h1>
-<p>این بخش در حال تکمیل است.</p>
-<p><a href="index.html">بازگشت به صفحه اصلی</a></p>
+
+<div class="container">
+
+<h2>دفتر وکالت تخصصی صاحب‌داد</h2>
+
+<form id="bookingForm">
+
+<input type="text" placeholder="نام و نام خانوادگی" required>
+
+<input type="text" placeholder="کد ملی" maxlength="10" required>
+
+<input type="tel" placeholder="شماره موبایل" required>
+
+<input type="text" placeholder="شهر محل سکونت">
+
+<select required>
+<option>نوع مشاوره</option>
+<option>حضوری</option>
+<option>تلفنی</option>
+<option>آنلاین</option>
+</select>
+
+<select required>
+<option>موضوع پرونده</option>
+<option>حقوقی</option>
+<option>کیفری</option>
+<option>خانواده</option>
+<option>ملکی</option>
+<option>ثبتی</option>
+<option>قراردادها</option>
+<option>اجرای احکام</option>
+<option>سایر</option>
+</select>
+
+<input type="date">
+
+<input type="time">
+
+<textarea rows="5" placeholder="توضیحات"></textarea>
+
+<input type="file">
+
+<button type="submit">
+ثبت درخواست
+</button>
+
+</form>
+
+<div class="success" id="msg">
+
+درخواست شما با موفقیت ثبت شد.
+<br><br>
+
+همکاران دفتر وکالت تخصصی صاحب‌داد درخواست شما را بررسی کرده و در اولین فرصت برای هماهنگی نوبت با شما تماس خواهند گرفت.
+
+</div>
+
+</div>
+
+<script>
+document.getElementById("bookingForm").onsubmit=function(e){
+e.preventDefault();
+document.getElementById("bookingForm").style.display="none";
+document.getElementById("msg").style.display="block";
+}
+</script>
+
 </body>
 </html>
