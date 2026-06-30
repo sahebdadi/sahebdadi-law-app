@@ -1,0 +1,60 @@
+body{
+margin:0;
+font-family:tahoma;
+background:#0b3d91;
+color:white;
+text-align:center;
+}
+
+.header{
+padding:40px 20px;
+}
+
+.logo{
+width:120px;
+border-radius:20px;
+}
+
+h1{
+color:#FFD700;
+font-size:34px;
+margin-top:15px;
+}
+
+h2{
+font-size:28px;
+margin:10px 0;
+}
+
+p{
+font-size:18px;
+}
+
+.menu{
+display:flex;
+flex-direction:column;
+gap:15px;
+padding:30px;
+}
+
+.menu a{
+background:white;
+color:#0b3d91;
+text-decoration:none;
+padding:18px;
+border-radius:15px;
+font-size:20px;
+font-weight:bold;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.menu a:hover{
+background:#FFD700;
+color:#000;
+}
+
+footer{
+margin-top:40px;
+padding:25px;
+background:#072d6a;
+}
