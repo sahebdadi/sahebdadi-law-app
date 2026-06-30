@@ -1,17 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll(".menu a");
 
-const links = document.querySelectorAll(".menu a");
-
-links.forEach(link => {
-
-link.addEventListener("click", function (e) {
-
-e.preventDefault();
-
-alert("این بخش در نسخه بعدی فعال خواهد شد.");
-
-});
-
-});
-
+  links[0].href = "booking.html";
+  links[1].href = "consultation.html";
+  links[2].href = "tracking.html";
+  links[3].href = "contract.html";
+  links[4].href = "upload.html";
+  links[5].href = "payment.html";
 });
